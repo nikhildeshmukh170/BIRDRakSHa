@@ -79,11 +79,12 @@ const UnderConstruction = () => {
             </div>
     
             {/* Social Media Links */}
-            {/* <div className="flex justify-center mt-6">
-              <a href="https://twitter.com" className="mx-4 text-[#C0FF73] text-2xl hover:underline">Twitter</a>
+            <div className="flex justify-center mt-6">
+                <p className="mx-10 text-[#cdefa4] text-md">"Exciting things are in the works! Our team is devoted to delivering a fantastic experience. See you soon!"</p>
+              {/* <a href="https://twitter.com" className="mx-4 text-[#C0FF73] text-2xl hover:underline">Twitter</a>
               <a href="https://instagram.com" className="mx-4 text-[#C0FF73] text-2xl hover:underline">Instagram</a>
-              <a href="https://facebook.com" className="mx-4 text-[#C0FF73] text-2xl hover:underline">Facebook</a>
-            </div> */}
+              <a href="https://facebook.com" className="mx-4 text-[#C0FF73] text-2xl hover:underline">Facebook</a> */}
+            </div>
           </div>
         </div>
       );
