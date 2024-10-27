@@ -6,7 +6,7 @@ import HomePage from './page/Homepage/HomePage';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App bg-gray-900 min-h-screen">
         <Routes>
           {/* Define your routes here */}
           <Route path="/" element={<UnderConstruction />} />
