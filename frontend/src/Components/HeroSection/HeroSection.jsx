@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import FileUploadIcon from "@mui/icons-material/FileUpload";
 import logo from "../../assests/logo.png";
 import backgroundVideo from "../../assests/backgroundVideo.mp4"; // Ensure the video file path is correct
 
 const HeroSection = () => {
+  const [rippleVisible, setRippleVisible] = useState(false);
+
+  const handleRipple = () => {
+    setRippleVisible(true);
+    setTimeout(() => setRippleVisible(false), 500);
+  };
+
+  const scrollToUploadSection = () => {
+    const uploadSection = document.getElementById("uploadSection");
+    if (uploadSection) {
+      uploadSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="relative flex items-center justify-center min-h-screen text-white p-6">
       
@@ -17,7 +31,7 @@ const HeroSection = () => {
       ></video>
       
       {/* Overlay and Content */}
-      <div className="relative w-full text-center p-8 flex flex-col gap-16 z-10 ">
+      <div className="relative w-full text-center p-8 flex flex-col gap-16 z-10">
         
         {/* Logo Section */}
         <div className="flex justify-center items-center">
@@ -37,27 +51,28 @@ const HeroSection = () => {
         {/* Upload Button */}
         <div className="flex flex-col items-center justify-center">
           <button
-            className="w-[170px] h-[54px] text-white font-semibold rounded-full flex items-center justify-center relative overflow-hidden
-             transition-all duration-300 transform hover:scale-105 active:scale-95
-             bg-opacity-60 backdrop-blur-lg border-2 border-lime-400 shadow-[0px_3px_15px_rgba(255,255,255,0.4)] active:shadow-none
-             before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-lime-300 before:to-green-400
-             before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500 hover:text-black"
+            onClick={() => {
+              handleRipple();
+              setTimeout(() => {
+                scrollToUploadSection();
+              }, 200); // 5 seconds delay
+            }}
+            className="relative w-[170px] h-[54px] text-white font-semibold rounded-full flex items-center justify-center 
+              overflow-hidden transition-all duration-300 transform hover:scale-105 active:scale-95 bg-opacity-60 
+              backdrop-blur-lg border-2 border-lime-400 shadow-[0px_3px_15px_rgba(255,255,255,0.4)] active:shadow-none 
+              before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-lime-300 
+              before:to-green-400 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500 
+              hover:text-black"
           >
             <FileUploadIcon className="mr-2 z-10" />
             <span className="relative z-10">Upload Here</span>
 
             {/* Ripple Effect */}
             <span
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400 to-lime-500 opacity-0 transform scale-0 transition-transform duration-500 ease-out"
-              onMouseDown={(e) => {
-                const ripple = e.target;
-                ripple.classList.remove("scale-0");
-                ripple.classList.add("scale-150", "opacity-20");
-                setTimeout(() => {
-                  ripple.classList.remove("scale-150", "opacity-20");
-                  ripple.classList.add("scale-0");
-                }, 500);
-              }}
+              className={`absolute inset-0 rounded-full bg-gradient-to-r from-green-400 to-lime-500 
+                transition-transform duration-500 ease-out ${
+                  rippleVisible ? 'opacity-20 scale-150' : 'opacity-0 scale-0'
+                }`}
             ></span>
           </button>
         </div>

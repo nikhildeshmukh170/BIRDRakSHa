@@ -2,12 +2,14 @@ import React from 'react'
 import SalesAnalysis from '../../Components/SalesAnalysis/SalesAnalysis'
 import Navbar from '../../Components/Navbar/Navbar'
 import HeroSection from '../../Components/HeroSection/HeroSection'
+import UploadSection from '../../Components/UploadSection/UploadSection'
 
 const HomePage = () => {
   return (
     <div className='w-full h-full text-white'>
       <Navbar />
       <HeroSection />
+      <UploadSection />
       HomePage
       <SalesAnalysis />
       <div className='pt-20 flex w-20'>
