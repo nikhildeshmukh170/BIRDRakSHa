@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from '../../assests/logo.png';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
+import "../Navbar/Navbar.css"
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -48,10 +49,14 @@ const Navbar = () => {
         </div>
   
         {/* Upload Button */}
-        <button style={{ backgroundColor: '#C0FF73' }} className="w-[170px] h-[46px] text-black py-2 px-4 rounded-full font-semibold flex items-center justify-center hover:bg-lime-500 transition-colors duration-300">
-            <FileUploadIcon className="mr-2" />
-            Upload Here
-            </button>
+        <button
+  style={{ backgroundColor: '#C0FF73' }}
+  className="w-[170px] h-[46px] text-black py-2 px-4 rounded-full font-semibold flex items-center justify-center transition-all duration-300 transform hover:scale-105 active:scale-95 hover:bg-lime-500"
+>
+  <FileUploadIcon className="mr-2" />
+  Upload Here
+</button>
+
       </nav>
     );
   };

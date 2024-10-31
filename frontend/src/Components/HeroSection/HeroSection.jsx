@@ -1,20 +1,30 @@
 import React from "react";
 import FileUploadIcon from "@mui/icons-material/FileUpload";
 import logo from "../../assests/logo.png";
+import backgroundVideo from "../../assests/backgroundVideo.mp4"; // Ensure the video file path is correct
 
 const HeroSection = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen text-white p-6">
-      <div className="w-full text-center p-8 flex flex-col gap-16">
+    <div className="relative flex items-center justify-center min-h-screen text-white p-6">
+      
+      {/* Background Video */}
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        src={backgroundVideo}
+        autoPlay
+        loop
+        muted
+      ></video>
+      
+      {/* Overlay and Content */}
+      <div className="relative w-full text-center p-8 flex flex-col gap-16 z-10 ">
+        
         {/* Logo Section */}
-        <div className="flex justify-center items-center ">
-          <img src={logo} alt="" className="w-80 h-auto" />
+        <div className="flex justify-center items-center">
+          <img src={logo} alt="Logo" className="w-80 h-auto" />
         </div>
 
         {/* Main Title */}
-        {/* <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-lime-400 to-green-600 text-transparent bg-clip-text">
-            BirdWatch:
-        </h2> */}
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-7xl font-bold bg-gradient-to-r from-white to-lime-400 bg-clip-text text-transparent">
             BirdWatch:
@@ -24,17 +34,32 @@ const HeroSection = () => {
           </p>
         </div>
 
-        {/* Subtitle */}
-        {/* <p className="text-lg font-semibold mb-8 text-lime-400">
-          Real-Time Bird Detection & Conservation Insights
-        </p> */}
-
         {/* Upload Button */}
         <div className="flex flex-col items-center justify-center">
-            <button style={{ backgroundColor: '#C0FF73' }} className="w-[200px] h-[60px] text-black py-2 px-4 rounded-full font-semibold flex items-center justify-center hover:bg-lime-500 transition-colors duration-300">
-            <FileUploadIcon className="mr-2" />
-            Upload Here
-            </button>
+          <button
+            className="w-[170px] h-[54px] text-white font-semibold rounded-full flex items-center justify-center relative overflow-hidden
+             transition-all duration-300 transform hover:scale-105 active:scale-95
+             bg-opacity-60 backdrop-blur-lg border-2 border-lime-400 shadow-[0px_3px_15px_rgba(255,255,255,0.4)] active:shadow-none
+             before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-lime-300 before:to-green-400
+             before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500 hover:text-black"
+          >
+            <FileUploadIcon className="mr-2 z-10" />
+            <span className="relative z-10">Upload Here</span>
+
+            {/* Ripple Effect */}
+            <span
+              className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400 to-lime-500 opacity-0 transform scale-0 transition-transform duration-500 ease-out"
+              onMouseDown={(e) => {
+                const ripple = e.target;
+                ripple.classList.remove("scale-0");
+                ripple.classList.add("scale-150", "opacity-20");
+                setTimeout(() => {
+                  ripple.classList.remove("scale-150", "opacity-20");
+                  ripple.classList.add("scale-0");
+                }, 500);
+              }}
+            ></span>
+          </button>
         </div>
       </div>
     </div>
