@@ -48,7 +48,7 @@ const Navbar = () => {
         </div>
   
         {/* Upload Button */}
-        <button style={{ backgroundColor: '#C0FF73' }} className="w-[200px] h-[60px] text-black py-2 px-4 rounded-full font-semibold flex items-center justify-center hover:bg-lime-500 transition-colors duration-300">
+        <button style={{ backgroundColor: '#C0FF73' }} className="w-[160px] h-[46px] text-black py-2 px-4 rounded-full font-semibold flex items-center justify-center hover:bg-lime-500 transition-colors duration-300">
             <FileUploadIcon className="mr-2" />
             Upload Here
             </button>
