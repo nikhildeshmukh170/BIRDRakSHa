@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../assests/logo.png";
 import FileUploadIcon from "@mui/icons-material/FileUpload";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import "../Navbar/Navbar.css";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,9 +27,13 @@ const Navbar = () => {
     }
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <nav
-      className={`flex fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-max py-3 px-6 rounded-full gap-10 ${
+      className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-max md:w-[50%] py-3 px-6 rounded-full gap-10 flex items-center justify-between md:justify-center ${
         isScrolled
           ? "bg-gray-900 bg-opacity-60 backdrop-blur-md shadow-lg"
           : "bg-gray-900 bg-opacity-900"
@@ -37,8 +44,8 @@ const Navbar = () => {
         <img src={logo} alt="BirdRaksha Logo" className="h-12" />
       </div>
 
-      {/* Navigation Links */}
-      <div className="flex items-center space-x-6 text-white ml-8 mr-8">
+      {/* Desktop Navigation Links */}
+      <div className="hidden md:flex items-center space-x-6 text-white ml-8 mr-8">
         <a href="#features" className="hover:text-green-400">
           Features
         </a>
@@ -53,15 +60,53 @@ const Navbar = () => {
         </a>
       </div>
 
-      {/* Upload Button */}
+      {/* Upload Button for Desktop */}
       <button
         style={{ backgroundColor: "#C0FF73" }}
         onClick={scrollToUploadSection}
-        className="w-[170px] h-[46px] text-black py-2 px-4 rounded-full font-semibold flex items-center justify-center transition-all duration-300 transform hover:scale-105 active:scale-95 hover:bg-lime-500"
+        className="hidden md:flex w-[170px] h-[46px] text-black py-2 px-4 rounded-full font-semibold items-center justify-center transition-all duration-300 transform hover:scale-105 active:scale-95 hover:bg-lime-500"
       >
         <FileUploadIcon className="mr-2" />
         Upload Here
       </button>
+
+      {/* Mobile Menu Toggle */}
+      <button
+        className="md:hidden text-white"
+        onClick={toggleMobileMenu}
+        aria-label="Toggle menu"
+      >
+        {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
+      </button>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-[90%] bg-gray-900 bg-opacity-95 rounded-lg py-4 text-center space-y-4 text-white">
+          <a href="#features" className="block hover:text-green-400" onClick={toggleMobileMenu}>
+            Features
+          </a>
+          <a href="#testimonials" className="block hover:text-green-400" onClick={toggleMobileMenu}>
+            Testimonials
+          </a>
+          <a href="#faq" className="block hover:text-green-400" onClick={toggleMobileMenu}>
+            FAQ
+          </a>
+          <a href="#blog" className="block hover:text-green-400" onClick={toggleMobileMenu}>
+            Blog
+          </a>
+          <button
+            style={{ backgroundColor: "#C0FF73" }}
+            onClick={() => {
+              scrollToUploadSection();
+              toggleMobileMenu();
+            }}
+            className="w-full text-black py-2 px-4 rounded-full font-semibold flex items-center justify-center transition-all duration-300 transform hover:scale-105 active:scale-95 hover:bg-lime-500"
+          >
+            <FileUploadIcon className="mr-2" />
+            Upload Here
+          </button>
+        </div>
+      )}
     </nav>
   );
 };
