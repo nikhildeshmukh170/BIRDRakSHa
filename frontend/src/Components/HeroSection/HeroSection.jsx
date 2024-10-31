@@ -35,7 +35,7 @@ const HeroSection = () => {
       <div className="relative w-full text-center p-4 sm:p-8 flex flex-col gap-8 sm:gap-16 z-10">
         
         {/* Logo Section */}
-        <div className="flex justify-center items-center mb-4 sm:mb-8">
+        <div className="flex justify-center items-center -mb-2 sm:mb-0">
           <img src={logo} alt="Logo" className="w-40 sm:w-80 h-auto" />
         </div>
 
