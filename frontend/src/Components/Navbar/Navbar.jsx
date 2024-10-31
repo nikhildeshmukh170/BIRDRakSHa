@@ -23,7 +23,7 @@ const Navbar = () => {
     return (
       <nav
         className={`flex fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-max py-3 px-6 rounded-full gap-10 ${
-          isScrolled ? "bg-gray-900 bg-opacity-60 shadow-lg" : "bg-gray-900 bg-opacity-900"
+          isScrolled ? "bg-gray-900 bg-opacity-50 backdrop-blur-md shadow-lg" : "bg-gray-900 bg-opacity-900"
         }`}
       >
         {/* Logo */}
