@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from '../../assests/logo.png';
+import FileUploadIcon from '@mui/icons-material/FileUpload';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
     return (
       <nav
         className={`flex fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-max py-3 px-6 rounded-full gap-10 ${
-          isScrolled ? "bg-black bg-opacity-60 shadow-lg" : "bg-black bg-opacity-900"
+          isScrolled ? "bg-gray-900 bg-opacity-60 shadow-lg" : "bg-gray-900 bg-opacity-900"
         }`}
       >
         {/* Logo */}
@@ -47,23 +48,10 @@ const Navbar = () => {
         </div>
   
         {/* Upload Button */}
-        <button style={{ backgroundColor: '#C0FF73' }} className="text-black py-2 px-4 rounded-full font-bold flex items-center ml-6 shadow-md hover:bg-green-500">
-          <span className="mr-2">Upload Here</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="2"
-            stroke="currentColor"
-            className="w-5 h-5"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4.5 15.75l7.5-7.5 7.5 7.5M12 4.5v16.5"
-            />
-          </svg>
-        </button>
+        <button style={{ backgroundColor: '#C0FF73' }} className="w-[200px] h-[60px] text-black py-2 px-4 rounded-full font-semibold flex items-center justify-center hover:bg-lime-500 transition-colors duration-300">
+            <FileUploadIcon className="mr-2" />
+            Upload Here
+            </button>
       </nav>
     );
   };
