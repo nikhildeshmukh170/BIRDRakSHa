@@ -4,6 +4,7 @@ import FileUploadIcon from "@mui/icons-material/FileUpload";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import "../Navbar/Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,7 +42,9 @@ const Navbar = () => {
     >
       {/* Logo */}
       <div className="flex items-center space-x-4">
-        <img src={logo} alt="BirdRaksha Logo" className="h-12" />
+        <Link to="/home" className="flex items-center">
+          <img src={logo} alt="BirdRaksha Logo" className="h-12" />
+        </Link>
       </div>
 
       {/* Desktop Navigation Links */}
@@ -49,9 +52,9 @@ const Navbar = () => {
         <a href="#features" className="hover:text-green-400">
           Features
         </a>
-        <a href="#testimonials" className="hover:text-green-400">
-          Testimonials
-        </a>
+        <Link to="/aboutus" className="hover:text-green-400">
+          About Us
+        </Link>
         <a href="#faq" className="hover:text-green-400">
           FAQ
         </a>
@@ -82,16 +85,32 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-[90%] bg-gray-900 bg-opacity-95 rounded-lg py-4 text-center space-y-4 text-white">
-          <a href="#features" className="block hover:text-green-400" onClick={toggleMobileMenu}>
+          <a
+            href="#features"
+            className="block hover:text-green-400"
+            onClick={toggleMobileMenu}
+          >
             Features
           </a>
-          <a href="#testimonials" className="block hover:text-green-400" onClick={toggleMobileMenu}>
+          <a
+            href="#testimonials"
+            className="block hover:text-green-400"
+            onClick={toggleMobileMenu}
+          >
             Testimonials
           </a>
-          <a href="#faq" className="block hover:text-green-400" onClick={toggleMobileMenu}>
+          <a
+            href="#faq"
+            className="block hover:text-green-400"
+            onClick={toggleMobileMenu}
+          >
             FAQ
           </a>
-          <a href="#blog" className="block hover:text-green-400" onClick={toggleMobileMenu}>
+          <a
+            href="#blog"
+            className="block hover:text-green-400"
+            onClick={toggleMobileMenu}
+          >
             Blog
           </a>
           <button

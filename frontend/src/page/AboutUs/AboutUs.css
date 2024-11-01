@@ -1,0 +1,17 @@
+/* Add this CSS to your stylesheet */
+@keyframes float {
+    0% {
+      transform: translatey(0);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
+  
+  .floating-circle {
+    animation: float 3s ease-in-out infinite;
+  }
+  

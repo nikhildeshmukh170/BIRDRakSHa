@@ -3,6 +3,8 @@ import SalesAnalysis from '../../Components/SalesAnalysis/SalesAnalysis';
 import Navbar from '../../Components/Navbar/Navbar';
 import HeroSection from '../../Components/HeroSection/HeroSection';
 import UploadSection from '../../Components/UploadSection/UploadSection';
+import Footer from '../../Components/Footer/Footer';
+import FAQs from '../../Components/FAQs/FAQs';
 
 const HomePage = () => {
   return (
@@ -31,6 +33,13 @@ const HomePage = () => {
           <SalesAnalysis />
         </div>
       </div>
+
+      {/* FAQs Section */}
+      <FAQs />
+
+      {/* Footer Section */}
+      <Footer />
+
     </div>
   );
 };
