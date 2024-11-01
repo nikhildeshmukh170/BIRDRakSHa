@@ -36,7 +36,7 @@ const FAQs = () => {
   };
 
   return (
-    <section className="text-white py-12 px-6 md:px-20">
+    <section id="faqs" className="text-white py-12 px-6 md:px-20 mt-10">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
         <div className="space-y-4">

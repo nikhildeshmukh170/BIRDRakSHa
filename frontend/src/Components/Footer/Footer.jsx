@@ -11,7 +11,7 @@ import logo from "../../assests/logo.png"; // Adjust path if needed
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-green-900 to-gray-900 text-white py-12 px-6 md:px-20">
+    <footer className="bg-gradient-to-r from-green-900 via-gray-900 to-green-900 text-white py-12 px-6 md:px-20">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-left">
 
         {/* Logo and About Section */}

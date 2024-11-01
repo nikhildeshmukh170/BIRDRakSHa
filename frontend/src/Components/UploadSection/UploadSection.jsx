@@ -204,6 +204,7 @@ const BirdUploadSection = () => {
           </div>
         </div>
       </div>
+      <div className="absolute w-full h-[150px] sm:h-[200px] p-8 bg-gradient-to-b from-transparent to-gray-800 z-8 -bottom-6 left-0"></div>
     </div>
   );
 };

@@ -72,7 +72,7 @@ const AboutUs = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-green-700 to-blue-950 text-white py-20 px-6 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-green-700 to-gray-900 text-white py-20 px-6 relative overflow-hidden">
       <Navbar />
       {/* Background Illustrations */}
       <div className="absolute inset-0 opacity-20">

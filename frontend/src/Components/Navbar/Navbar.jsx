@@ -28,6 +28,14 @@ const Navbar = () => {
     }
   };
 
+  const scrollToFAQsSection = () => {
+    const uploadSection = document.getElementById("FAQsSection");
+    if (uploadSection) {
+      uploadSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -55,12 +63,12 @@ const Navbar = () => {
         <Link to="/aboutus" className="hover:text-green-400">
           About Us
         </Link>
-        <a href="#faq" className="hover:text-green-400">
-          FAQ
+        <a href="/home#faqs" className="hover:text-green-400">
+          FAQs
         </a>
-        <a href="#blog" className="hover:text-green-400">
-          Blog
-        </a>
+        <Link to="/contactus" className="hover:text-green-400">
+          Contact
+        </Link>
       </div>
 
       {/* Upload Button for Desktop */}
@@ -92,27 +100,27 @@ const Navbar = () => {
           >
             Features
           </a>
-          <a
-            href="#testimonials"
+          <Link
+            to="/aboutus"
             className="block hover:text-green-400"
             onClick={toggleMobileMenu}
           >
-            Testimonials
-          </a>
+            About Us
+          </Link>
           <a
-            href="#faq"
+            href="/home#faq"
             className="block hover:text-green-400"
             onClick={toggleMobileMenu}
           >
-            FAQ
+            FAQs
           </a>
-          <a
-            href="#blog"
+          <Link
+            to="/contactus"
             className="block hover:text-green-400"
             onClick={toggleMobileMenu}
           >
-            Blog
-          </a>
+            Contact
+          </Link>
           <button
             style={{ backgroundColor: "#C0FF73" }}
             onClick={() => {

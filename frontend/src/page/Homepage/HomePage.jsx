@@ -5,6 +5,8 @@ import HeroSection from '../../Components/HeroSection/HeroSection';
 import UploadSection from '../../Components/UploadSection/UploadSection';
 import Footer from '../../Components/Footer/Footer';
 import FAQs from '../../Components/FAQs/FAQs';
+import HowItWorks from '../../Components/HowItWorks/HowItWorks';
+
 
 const HomePage = () => {
   return (
@@ -33,6 +35,9 @@ const HomePage = () => {
           <SalesAnalysis />
         </div>
       </div>
+
+      {/* HowItWorks section */}
+      <HowItWorks />
 
       {/* FAQs Section */}
       <FAQs />
