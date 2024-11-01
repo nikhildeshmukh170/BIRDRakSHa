@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-max md:w-[50%] py-3 px-6 rounded-full gap-10 flex items-center justify-between md:justify-center ${
+      className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[80%] md:w-[50%] py-3 px-6 rounded-full gap-10 flex items-center justify-between md:justify-center ${
         isScrolled
           ? "bg-gray-900 bg-opacity-60 backdrop-blur-md shadow-lg"
           : "bg-gray-900 bg-opacity-900"
