@@ -17,8 +17,8 @@ const HomePage = () => {
       <HeroSection />
 
       {/* Gradient overlays for visual effects */}
-      <div className='absolute w-full h-[150px] sm:h-[200px] p-8 bg-gradient-to-b from-transparent to-black z-9 bottom-0 left-0'></div>
       <div className='absolute w-full h-[150px] sm:h-[200px] p-8 bg-gradient-to-b from-gray-900 to-transparent z-9 top-0 left-0'></div>
+      <div className='absolute w-full h-[150px] sm:h-[200px] p-8 bg-gradient-to-b from-transparent to-black z-9 bottom-0 left-0'></div>
       
       {/* Upload Section */}
       <UploadSection />
