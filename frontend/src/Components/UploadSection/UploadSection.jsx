@@ -11,7 +11,7 @@ import {
   FaChartLine,
 } from "react-icons/fa";
 import uploadbgroundVideo from "../../assests/uploadbgroundVideo.mp4";
-import birdVideo from "../../assests/birdVideo.mp4"
+import birdVideo from "../../assests/birdVideo.mp4";
 
 const BirdUploadSection = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -178,7 +178,7 @@ const BirdUploadSection = () => {
         </div>
 
         {/* Second Card with Video and "Did You Know" Section */}
-        <div className="relative z-20 flex flex-col md:flex-row w-full max-w-7xl h-[200px] gap-8 md:gap-20 rounded-lg overflow-hidden">
+        <div className="relative z-20 flex flex-col md:flex-row w-full max-w-7xl h-auto gap-8 md:gap-20 rounded-lg overflow-hidden">
           {/* Left Card - Video Only */}
           <div className="w-full md:w-2/3">
             <video
@@ -191,7 +191,7 @@ const BirdUploadSection = () => {
           </div>
 
           {/* Right Card - "Did You Know" Section */}
-          <div className="p-4 md:p-6 flex text-center bg-gradient-to-br from-white to-lime-200 shadow-inner flex flex-col rounded-lg backdrop-blur-sm">
+          <div className="p-4 md:p-6 flex text-center bg-gradient-to-br from-white to-lime-200 shadow-inner flex flex-col rounded-lg backdrop-blur-sm w-full md:w-1/3">
             <div className="mt-4 md:mt-6 p-6 bg-green-200 bg-opacity-30 rounded-lg shadow-sm hover:bg-green-400 hover:bg-opacity-30">
               <h4 className="font-bold text-green-800 text-md md:text-lg mb-2">
                 Did You Know?
