@@ -3,7 +3,7 @@ import FileUploadIcon from "@mui/icons-material/FileUpload";
 import logo from "../../assests/logo.png";
 import backgroundVideo from "../../assests/backgroundVideo.mp4"; // Ensure the video file path is correct
 import "./HeroSection.css";
-import bird from "../../assests/bird.png"
+
 
 const HeroSection = () => {
   const [rippleVisible, setRippleVisible] = useState(false);
@@ -40,10 +40,7 @@ const HeroSection = () => {
           <img src={logo} alt="Logo" className="w-40 sm:w-80 h-auto" />
         </div>
 
-        {/* bird img section */}
-        <div className="absolute ml-24 left-96 -right-96 -top-7 opacity-65">
-          <img src={bird} alt="" />
-        </div>
+        
 
         {/* Main Title with CSS Typing Animation */}
         <div className="flex flex-col items-center justify-center mb-4 sm:mb-8">
