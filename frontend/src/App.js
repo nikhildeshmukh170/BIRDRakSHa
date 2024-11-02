@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import UnderConstruction from './page/UnderConstruction';
 import HomePage from './page/Homepage/HomePage';
 import AboutUs from './page/AboutUs/AboutUs';
+import Contactus from './page/ContactUs/ContactUs';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
           <Route path="/" element={<UnderConstruction />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/aboutus" element={<AboutUs />} />
-          {/* <Route path='/contactus' element={<Contactus />} /> */}
+          <Route path='/contactus' element={<Contactus />} />
           {/* You can add more routes for other components */}
         </Routes>
       </div>
