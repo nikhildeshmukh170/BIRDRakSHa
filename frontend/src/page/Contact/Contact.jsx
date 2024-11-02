@@ -4,7 +4,7 @@ import Footer from '../../Components/Footer/Footer'
 import ContactUs from '../../Components/ContactUs/ContactUs'
 
 
-const Contactus = () => {
+const Contact = () => {
   return (
     <div>
         <Navbar />
@@ -14,4 +14,4 @@ const Contactus = () => {
   )
 }
 
-export default Contactus
+export default Contact
