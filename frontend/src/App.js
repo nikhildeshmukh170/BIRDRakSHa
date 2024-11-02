@@ -15,7 +15,7 @@ function App() {
           <Route path="/" element={<UnderConstruction />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/aboutus" element={<AboutUs />} />
-          <Route path='/contactus' element={<Contac />} />
+          <Route path='/contactus' element={<Contact />} />
           {/* You can add more routes for other components */}
         </Routes>
       </div>
