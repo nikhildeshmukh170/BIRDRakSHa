@@ -50,16 +50,16 @@ const Navbar = () => {
     >
       {/* Logo */}
       <div className="flex items-center space-x-4">
-        <Link to="/home" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img src={logo} alt="BirdRaksha Logo" className="h-12" />
         </Link>
       </div>
 
       {/* Desktop Navigation Links */}
       <div className="hidden md:flex items-center space-x-6 text-white ml-8 mr-8">
-        <a href="#features" className="hover:text-green-400">
-          Features
-        </a>
+        <Link to="/" className="hover:text-green-400">
+          Home
+        </Link>
         <Link to="/aboutus" className="hover:text-green-400">
           About Us
         </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
           FAQs
         </a>
         <Link to="/contactus" className="hover:text-green-400">
-          Contact
+          Contact us
         </Link>
       </div>
 
@@ -93,13 +93,13 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-[90%] bg-gray-900 bg-opacity-95 rounded-lg py-4 text-center space-y-4 text-white">
-          <a
-            href="#features"
+          <Link
+            to="/"
             className="block hover:text-green-400"
             onClick={toggleMobileMenu}
           >
-            Features
-          </a>
+            Home
+          </Link>
           <Link
             to="/aboutus"
             className="block hover:text-green-400"
@@ -119,7 +119,7 @@ const Navbar = () => {
             className="block hover:text-green-400"
             onClick={toggleMobileMenu}
           >
-            Contact
+            Contact us
           </Link>
           <button
             style={{ backgroundColor: "#C0FF73" }}

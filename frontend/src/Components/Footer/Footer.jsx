@@ -8,6 +8,7 @@ import {
   FaPhone,
 } from "react-icons/fa";
 import logo from "../../assests/logo.png"; // Adjust path if needed
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -37,9 +38,9 @@ const Footer = () => {
           <ul className="text-sm space-y-2 text-gray-200">
             <li><a href="#conservation" className="hover:underline">Conservation Efforts</a></li>
             <li><a href="#resources" className="hover:underline">Educational Resources</a></li>
-            <li><a href="#get-involved" className="hover:underline">Get Involved</a></li>
+            <li><Link to="/get-involved" className="hover:underline">Get Involved</Link></li>
             <li><a href="#support" className="hover:underline">Support Our Cause</a></li>
-            <li><a href="#contact" className="hover:underline">Contact Us</a></li>
+            <li><Link to="/contactus" className="hover:underline">Contact Us</Link></li>
           </ul>
         </div>
 

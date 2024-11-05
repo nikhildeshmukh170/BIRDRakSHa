@@ -1,17 +1,16 @@
 import React from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
+import GetInvolved from '../../Components/GetInvolved/GetInvolved'
 import Footer from '../../Components/Footer/Footer'
-import ContactUs from '../../Components/ContactUs/ContactUs'
 
-
-const Contact = () => {
+const GetInvolvedPage = () => {
   return (
-    <div w-full h-full text-white> 
+    <div w-full h-full text-white>
         <Navbar />
-        <ContactUs />
+        <GetInvolved />
         <Footer />
     </div>
   )
 }
 
-export default Contact
+export default GetInvolvedPage
