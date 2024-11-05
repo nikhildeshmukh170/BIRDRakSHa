@@ -63,7 +63,7 @@ const Navbar = () => {
         <Link to="/aboutus" className="hover:text-green-400">
           About Us
         </Link>
-        <a href="/home#faqs" className="hover:text-green-400">
+        <a href="/#faqs" className="hover:text-green-400">
           FAQs
         </a>
         <Link to="/contactus" className="hover:text-green-400">
@@ -108,7 +108,7 @@ const Navbar = () => {
             About Us
           </Link>
           <a
-            href="/home#faq"
+            href="/#faq"
             className="block hover:text-green-400"
             onClick={toggleMobileMenu}
           >
