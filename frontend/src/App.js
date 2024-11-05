@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import UnderConstruction from './page/UnderConstruction';
+import UnderConstruction from './page/UnderConstruction';
 import HomePage from './page/Homepage/HomePage';
 import AboutUs from './page/AboutUs/AboutUs';
 import Contact from './page/Contact/Contact';
@@ -13,7 +13,7 @@ function App() {
       <div className="App bg-gradient-to-b from-gray-950 to-gray-800 shadow-lg min-h-screen">
         <Routes>
           {/* Define your routes here */}
-          {/* <Route path="/" element={<UnderConstruction />} /> */}
+          <Route path="/under" element={<UnderConstruction />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path='/contactus' element={<Contact />} />
