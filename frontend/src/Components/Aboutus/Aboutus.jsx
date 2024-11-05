@@ -1,58 +1,63 @@
 import React, { useState } from "react";
 import logo from "../../assests/logo.png"; // Ensure the correct path to the logo image
 import "./AboutUs.css";
+import Nikhil from "../../assests/nikhil.png";
+import Shivam from "../../assests/shivam.png"
+import Bharat from "../../assests/bharat.png"
+import Utkarsh from "../../assests/utkarsh.png"
 import avatar from "../../assests/avatar.png";
-
+import { useNavigate } from "react-router-dom";
 
 const teamMembers = [
   {
     name: "Nikhil Deshmukh",
-    role: "Frontend & UI/UX Developer",
-    img: avatar,
+    role: "Frontend Developer, UI/UX Designer & Machine Learning Specialist",
+    img: Nikhil,
     social: {
       twitter: "https://twitter.com/nikhil",
       linkedin: "https://linkedin.com/in/nikhil",
     },
     description:
-      "Nikhil is responsible for the frontend development, ensuring a smooth user experience.",
+      "Nikhil is responsible for frontend development and UI/UX design, ensuring a smooth user experience while also specializing in machine learning.",
   },
   {
     name: "Shivam Kumar Pathak",
-    role: "Backend & API Specialist",
-    img: avatar,
+    role: "Backend Developer, API Integration & Machine Learning Specialist",
+    img: Shivam,
     social: {
       twitter: "https://twitter.com/shivam",
       linkedin: "https://linkedin.com/in/shivam",
     },
     description:
-      "Shivam focuses on backend development and API integration for data processing.",
+      "Shivam focuses on backend development, API integration, and machine learning, facilitating efficient data processing and classification.",
   },
   {
     name: "Somala Bharat Sai",
-    role: "Machine Learning Engineer",
-    img: avatar,
+    role: "Research Specialist",
+    img: Bharat,
     social: {
       twitter: "https://twitter.com/somala",
       linkedin: "https://linkedin.com/in/somala",
     },
     description:
-      "Somala specializes in machine learning algorithms for bird species classification.",
+      "Somala conducts research and applies machine learning algorithms across various projects, specializing in bird species classification.",
   },
   {
     name: "Utkarsh Maurya",
     role: "Data Analyst & Visualization Expert",
-    img: avatar,
+    img: Utkarsh,
     social: {
       twitter: "https://twitter.com/utkarsh",
       linkedin: "https://linkedin.com/in/utkarsh",
     },
     description:
-      "Utkarsh analyzes data and visualizes insights to enhance user understanding.",
+      "Utkarsh analyzes data and visualizes insights to enhance user understanding and drive decision-making.",
   },
 ];
 
+
 const mentor = {
-  name: "Seema Srivastav",
+  name: "Dr.Seema Srivastava",
   role: "Project Mentor",
   img: avatar,
 };
@@ -60,6 +65,7 @@ const mentor = {
 const Aboutus = () => {
   const [selectedMember, setSelectedMember] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   const openModal = (member) => {
     setSelectedMember(member);
@@ -69,6 +75,10 @@ const Aboutus = () => {
   const closeModal = () => {
     setSelectedMember(null);
     setIsModalOpen(false);
+  };
+
+  const handleGetInvolvedClick = () => {
+    navigate("/get-involved");
   };
 
   return (
@@ -156,7 +166,7 @@ const Aboutus = () => {
                   className="w-28 h-28 rounded-full mx-auto mb-4 object-cover border-4 border-green-500"
                 />
                 <h3 className="text-2xl font-semibold mb-2">{member.name}</h3>
-                <p className="text-sm text-gray-600">{member.role}</p>
+                <p className="text-sm text-gray-700">{member.role}</p>
                 <p className="text-sm text-gray-500 mt-2">
                   {member.description}
                 </p>
@@ -202,7 +212,10 @@ const Aboutus = () => {
             participation in our platform can help make a real impact. Let's
             protect bird species and their habitats for future generations.
           </p>
-          <button className="bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 transition duration-300">
+          <button
+            onClick={handleGetInvolvedClick}
+            className="bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 transition duration-300 z-60 relative"
+          >
             Get Involved
           </button>
         </div>
@@ -283,7 +296,6 @@ const Aboutus = () => {
         </div>
       )}
     </section>
-
   );
 };
 
