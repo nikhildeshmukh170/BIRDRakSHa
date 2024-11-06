@@ -39,6 +39,9 @@ const UnderConstruction = () => {
     if (showHomePage) {
         return (
             <div className="celebration-screen flex flex-col items-center justify-center min-h-screen bg-[#121212] text-white">
+                {/* Logo at the top */}
+                <img src={logo} alt="Project Logo" className="w-40 md:w-56 mb-4" />
+
                 {/* Confetti Effect */}
                 <Confetti 
                     width={window.innerWidth} 
@@ -51,7 +54,7 @@ const UnderConstruction = () => {
                 <p className="text-xl mt-4">We are live! Explore our amazing features.</p>
                 {/* Additional celebratory message */}
                 <div className="mt-6">
-                    <p>Redirecting you to the homepage in 5 seconds...</p>
+                    <p>Redirecting you to the homepage in 10 seconds...</p>
                 </div>
             </div>
         );

@@ -47,7 +47,7 @@ const HeroSection = () => {
           <h2 className="text-4xl sm:text-7xl font-bold bg-gradient-to-r from-white to-lime-400 bg-clip-text text-transparent">
             BirdWatch:
           </h2>
-          <p className="typing-effect text-2xl sm:text-6xl font-bold bg-gradient-to-r from-white to-lime-400 bg-clip-text text-transparent w-full sm:w-[75%] h-auto">
+          <p className="typing-effect text-2xl sm:text-6xl font-bold bg-gradient-to-r from-white to-lime-400 bg-clip-text text-transparent w-full sm:w-[75%] h-[130px]">
             Real-Time Bird Detection & Conservation Insights
           </p>
         </div>
