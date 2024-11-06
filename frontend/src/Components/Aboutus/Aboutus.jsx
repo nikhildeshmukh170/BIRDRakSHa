@@ -3,7 +3,7 @@ import logo from "../../assests/logo.png"; // Ensure the correct path to the log
 import "./AboutUs.css";
 import Nikhil from "../../assests/nikhil.png";
 import Shivam from "../../assests/shivam.png"
-import Bharat from "../../assests/bharat.png"
+import Bharat from "../../assests/bharatsec.png"
 import Utkarsh from "../../assests/utkarsh.png"
 import avatar from "../../assests/avatar.png";
 import { useNavigate } from "react-router-dom";
@@ -15,7 +15,7 @@ const teamMembers = [
     img: Nikhil,
     social: {
       twitter: "https://twitter.com/nikhil",
-      linkedin: "https://linkedin.com/in/nikhil",
+      linkedin: "https://linkedin.com/in/nikhil-d-deshmukh",
     },
     description:
       "Nikhil is responsible for frontend development and UI/UX design, ensuring a smooth user experience while also specializing in machine learning.",
@@ -26,7 +26,7 @@ const teamMembers = [
     img: Shivam,
     social: {
       twitter: "https://twitter.com/shivam",
-      linkedin: "https://linkedin.com/in/shivam",
+      linkedin: "https://linkedin.com/in/shivamkumarpathak0610",
     },
     description:
       "Shivam focuses on backend development, API integration, and machine learning, facilitating efficient data processing and classification.",
@@ -37,7 +37,7 @@ const teamMembers = [
     img: Bharat,
     social: {
       twitter: "https://twitter.com/somala",
-      linkedin: "https://linkedin.com/in/somala",
+      linkedin: "https://linkedin.com/in/bharath-somala-computer-science",
     },
     description:
       "Somala conducts research and applies machine learning algorithms across various projects, specializing in bird species classification.",
@@ -48,7 +48,7 @@ const teamMembers = [
     img: Utkarsh,
     social: {
       twitter: "https://twitter.com/utkarsh",
-      linkedin: "https://linkedin.com/in/utkarsh",
+      linkedin: "https://linkedin.com/in/utkarsh-maurya-515258252",
     },
     description:
       "Utkarsh analyzes data and visualizes insights to enhance user understanding and drive decision-making.",
