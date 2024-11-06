@@ -3,7 +3,7 @@ import logo from "../../assests/logo.png"; // Ensure the correct path to the log
 import "./AboutUs.css";
 import Nikhil from "../../assests/nikhil.png";
 import Shivam from "../../assests/shivam.png"
-import Bharat from "../../assests/bharatsec.png"
+import Bharat from "../../assests/bharatsec.jpg"
 import Utkarsh from "../../assests/utkarsh.png"
 import avatar from "../../assests/avatar.png";
 import { useNavigate } from "react-router-dom";
@@ -32,7 +32,7 @@ const teamMembers = [
       "Shivam focuses on backend development, API integration, and machine learning, facilitating efficient data processing and classification.",
   },
   {
-    name: "Somala Bharat Sai",
+    name: "Somala Bharath Sai",
     role: "Research Specialist",
     img: Bharat,
     social: {
