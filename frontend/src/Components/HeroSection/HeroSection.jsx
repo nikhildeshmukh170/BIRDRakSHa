@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FileUploadIcon from "@mui/icons-material/FileUpload";
 import logo from "../../assests/logo.png";
-import backgroundVideo from "../../assests/backgroundVideo.mp4"; // Ensure the video file path is correct
+import backgroundVideo from "../../assests/backgroundVideo.mp4";
 import "./HeroSection.css";
 
 
