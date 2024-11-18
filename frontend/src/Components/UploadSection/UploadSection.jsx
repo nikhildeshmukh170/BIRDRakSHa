@@ -31,19 +31,37 @@ const BirdUploadSection = () => {
     }
   };
 
-  const handleUpload = () => {
+  const handleUpload = async () => {
     if (!selectedFile) {
       setUploadStatus("Please select a file to upload.");
       return;
     }
-
+  
     setUploadStatus("Uploading...");
-    setTimeout(() => {
-      setUploadStatus("Upload successful!");
+    
+    const formData = new FormData();
+    formData.append("image", selectedFile);
+  
+    try {
+      const response = await fetch("http://localhost:8000/api/predict/", {
+        method: "POST",
+        body: formData,
+      });
+  
+      if (!response.ok) {
+        throw new Error("Failed to upload file");
+      }
+  
+      const result = await response.json();
+      alert(result.predicted_class);
+      setUploadStatus(`Upload successful! File URL: ${result.filePath}`);
       setSelectedFile(null);
       setPreviewUrl("");
-    }, 2000);
+    } catch (error) {
+      setUploadStatus("Failed to upload file. Please try again.");
+    }
   };
+  
 
   return (
     <div
@@ -149,8 +167,7 @@ const BirdUploadSection = () => {
                     style={{ backgroundColor: "#C0FF73" }}
                     className="w-[170px] h-[46px] text-black py-2 px-4 rounded-full font-semibold flex items-center justify-center transition-all duration-300 transform hover:scale-105 active:scale-95 hover:bg-lime-500"
                   >
-                    <FileUploadIcon className="mr-2" />
-                    Upload Here
+                    Predict
                   </button>
                 </div>
               </>
