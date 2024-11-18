@@ -155,7 +155,7 @@ const BirdUploadSection = () => {
                     <img
                       src={previewUrl}
                       alt="Preview"
-                      className="w-full h-32 md:h-48 object-cover rounded-md border border-gray-300 shadow-md mb-4"
+                      className=" h-48 md:h-48 object-cover rounded-md border border-gray-300 shadow-md mb-4"
                     />
                   </div>
                 )}
