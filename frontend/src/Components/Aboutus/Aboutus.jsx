@@ -5,6 +5,7 @@ import Nikhil from "../../assests/nikhil.png";
 import Shivam from "../../assests/shivam.png"
 import Bharat from "../../assests/bharatsec.jpg"
 import Utkarsh from "../../assests/utkarsh.png"
+import seema_maam from "../../assests/seema_maam.jpg"
 import avatar from "../../assests/avatar.png";
 import { useNavigate } from "react-router-dom";
 
@@ -53,13 +54,24 @@ const teamMembers = [
     description:
       "Utkarsh analyzes data and visualizes insights to enhance user understanding and drive decision-making.",
   },
+  {
+    name: "Pranav",
+    role: "Contributor",
+    img: avatar,
+    social: {
+      twitter: "https://twitter.com/",
+      linkedin: "https://linkedin.com/in/",
+    },
+    description:
+      "Pranav is our contributor",
+  },
 ];
 
 
 const mentor = {
   name: "Dr.Seema Srivastava",
   role: "Project Mentor",
-  img: avatar,
+  img: seema_maam,
 };
 
 const Aboutus = () => {
@@ -153,7 +165,7 @@ const Aboutus = () => {
             technology for bird conservation. Each member brings a unique skill
             set that contributes to our mission.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
@@ -192,7 +204,7 @@ const Aboutus = () => {
             <h3 className="text-3xl font-semibold mb-2">{mentor.name}</h3>
             <p className="text-sm text-gray-300">{mentor.role}</p>
             <p className="text-sm text-gray-200 text-center mt-2 max-w-xl">
-              Seema is an accomplished professional with extensive experience in
+              Seema ma`am is an accomplished professional with extensive experience in
               environmental conservation and technology integration. Her
               guidance has been instrumental in our project's development,
               helping us navigate challenges and align our objectives with best
