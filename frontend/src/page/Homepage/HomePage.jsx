@@ -24,17 +24,17 @@ const HomePage = () => {
       <UploadSection />
 
       {/* Home Content */}
-      <div className='pt-10 sm:pt-20 flex flex-col items-center'>
-        <h1 className='text-lg sm:text-xl font-semibold mb-4'>HomePage</h1>
+      {/* <div className='pt-10 sm:pt-20 flex flex-col items-center'>
+        <h1 className='text-lg sm:text-xl font-semibold mb-4'>HomePage</h1> */}
 
         {/* Sales Analysis Section with Responsive Grid */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full px-4 sm:px-8'>
+        {/* <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full px-4 sm:px-8'>
           <SalesAnalysis />
           <SalesAnalysis />
           <SalesAnalysis />
           <SalesAnalysis />
         </div>
-      </div>
+      </div> */}
 
       {/* HowItWorks section */}
       <HowItWorks />
