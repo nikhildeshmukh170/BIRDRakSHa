@@ -130,7 +130,8 @@ const BirdUploadSection = () => {
   const closeModal = () => {
     setShowModal(false);
     setPredictionData(null);
-    setImageFile(null); // Reset the image file after closing the modal
+    setImageFile(null);
+    setPreviewUrl("") // Reset the image file after closing the modal
   };
 
   // Register the necessary Chart.js components
@@ -217,7 +218,7 @@ const BirdUploadSection = () => {
               <div className="flex flex-col items-center justify-center h-full">
                 <FaCheckCircle className="text-green-400 text-4xl md:text-5xl mb-4" />
                 <h3 className="text-green-400 text-xl md:text-2xl font-semibold">
-                  Upload Successful!
+                  Uploaded Successful!
                 </h3>
               </div>
             ) : (
