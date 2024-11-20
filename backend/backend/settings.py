@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-s25@$ou34s7%9ukwy4f(r8wdgz!ex_7nd60bov^e6sd#2cpmig
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",  # Local development
+    "127.0.0.1",  # Localhost IP
+    "your-production-domain.com",  # Add your production domain here
+]
 
 
 # Application definition
@@ -119,18 +123,27 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+# Directory where Django collects all static files for production
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Optional: Additional directories to search for static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # Add your app's static files here
+]
+
+# Media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# settings.py
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
+# CORS Settings
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
@@ -150,10 +163,7 @@ CORS_ALLOW_METHODS = [
     'DELETE',
 ]
 
-
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Add your frontend URL here
     "https://yourfrontenddomain.com",  # If you have a production frontend domain
 ]
-
-
