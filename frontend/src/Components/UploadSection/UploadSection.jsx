@@ -211,8 +211,9 @@ const BirdUploadSection = () => {
           </div>
 
           {/* Right Card - Image Upload */}
+
           <div className="p-4 md:p-6 flex-2 text-center border-2 border-green-400 shadow-inner flex flex-col rounded-lg backdrop-blur-sm">
-            {uploadStatus === "Upload successful!" ? (
+            {previewUrl ? (
               <div className="flex flex-col items-center justify-center h-full">
                 <FaCheckCircle className="text-green-400 text-4xl md:text-5xl mb-4" />
                 <h3 className="text-green-400 text-xl md:text-2xl font-semibold">
@@ -233,20 +234,8 @@ const BirdUploadSection = () => {
                     Select Bird Image
                   </p>
                 </div>
-
-                Image Preview
-                {previewUrl && (
-                  <div className="mt-4">
-                    <img
-                      src={previewUrl}
-                      alt="Preview"
-                      className=" h-64 md:h-48 object-cover rounded-md border border-gray-300 shadow-md mb-4"
-                    />
-                  </div>
-                )}
-
-                {/* Instead Just alert that Image is uploaded successfully */}
-
+                </>
+            )}
                 {/* Upload Button */}
                 <div className="flex justify-center items-center">
                   <button
@@ -257,8 +246,6 @@ const BirdUploadSection = () => {
                     Predict
                   </button>
                 </div>
-              </>
-            )}
 
             {/* Additional Information */}
             <div className="mt-4 text-gray-300 text-xs md:text-sm">
