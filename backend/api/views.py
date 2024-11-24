@@ -28,7 +28,7 @@ def predict_bird_species(request):
         image = Image.open(image_path).convert("RGB")
 
         # Preprocess the image using the ViT feature extractor
-        inputs = extractor(images=image, return_tensors="pt")
+        inputs = extractor(images=image, return_tensors="pt", padding=True)
 
         # Perform a forward pass through the model to get logits
         with torch.no_grad():

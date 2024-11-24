@@ -1,8 +1,14 @@
-import React from 'react'
+import React from "react";
 import { FaTimes } from "react-icons/fa";
 import { Bar, Line, Pie, Radar } from "react-chartjs-2";
 
-function DialogBox({predictionData, closeModal, isPredicting, activeTab, setActiveTab}) {
+function DialogBox({
+  predictionData,
+  closeModal,
+  isPredicting,
+  activeTab,
+  setActiveTab,
+}) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
       <div className="relative bg-white bg-opacity-100 backdrop-blur-md rounded-xl shadow-md shadow-green-200 w-11/12 h-[80%] md:w-2/3 max-h-[160vh] overflow-hidden transform transition-all duration-500 ease-in-out">
@@ -15,17 +21,24 @@ function DialogBox({predictionData, closeModal, isPredicting, activeTab, setActi
         </button>
 
         {/* Header */}
+        {/* Header */}
         <div className="p-4 bg-gradient-to-r from-lime-300 to-green-500 rounded-t-xl flex items-center justify-between">
-          <h2 className="text-3xl font-bold text-gray-800  ml-4">
+          <h2 className="text-3xl font-bold text-gray-800 ml-4">
             {predictionData?.species || "Predicting..."}
           </h2>
-          {predictionData && (
+
+          {/* Check if predictionData is available */}
+          {predictionData ? (
             <div
               className={`py-1 px-3 rounded-full text-white mr-12 text-lg ${
-                predictionData.safe ? "bg-green-600" : "bg-red-600"
+                predictionData.safe === true ? "bg-green-600" : "bg-red-600"
               }`}
             >
-              {predictionData.safe ? "Safe" : "Endangered"}
+              {predictionData.safe === true ? "Safe" : "Endangered"}
+            </div>
+          ) : (
+            <div className="py-1 px-3 rounded-full text-white mr-12 text-lg bg-gray-500">
+              Loading...
             </div>
           )}
         </div>
@@ -99,15 +112,13 @@ function DialogBox({predictionData, closeModal, isPredicting, activeTab, setActi
                             datasets: [
                               {
                                 label: "Species Analysis",
-                                data: predictionData.graphData
-                                  .analysisValues1,
+                                data: predictionData.graphData.analysisValues1,
                                 backgroundColor: "rgba(75,192,192,0.4)",
                                 borderColor: "rgba(75,192,192,1)",
                                 borderWidth: 1,
                               },
                             ],
                           }}
-                          
                         />
                       </div>
 
@@ -136,7 +147,6 @@ function DialogBox({predictionData, closeModal, isPredicting, activeTab, setActi
                               },
                             ],
                           }}
-                          
                         />
                       </div>
 
@@ -165,7 +175,6 @@ function DialogBox({predictionData, closeModal, isPredicting, activeTab, setActi
                               },
                             ],
                           }}
-                          
                         />
                       </div>
 
@@ -188,17 +197,13 @@ function DialogBox({predictionData, closeModal, isPredicting, activeTab, setActi
                               {
                                 label: "Characteristics",
                                 data: predictionData.graphData
-                                  .characteristicsData || [
-                                  10, 20, 30, 40, 50,
-                                ], // Fallback to default data
+                                  .characteristicsData || [10, 20, 30, 40, 50], // Fallback to default data
                                 backgroundColor: "rgba(179,181,198,0.2)",
                                 borderColor: "rgba(179,181,198,1)",
-                                pointBackgroundColor:
-                                  "rgba(179,181,198,1)",
+                                pointBackgroundColor: "rgba(179,181,198,1)",
                                 pointBorderColor: "#fff",
                                 pointHoverBackgroundColor: "#fff",
-                                pointHoverBorderColor:
-                                  "rgba(179,181,198,1)",
+                                pointHoverBorderColor: "rgba(179,181,198,1)",
                               },
                             ],
                           }}
@@ -214,10 +219,9 @@ function DialogBox({predictionData, closeModal, isPredicting, activeTab, setActi
                         Predictions for {predictionData.species}
                       </h4>
                       <p className="text-gray-700 mt-2">
-                        Here, we can present more detailed predictions,
-                        such as the projected population trend, likely
-                        habitats, and more information about the bird's
-                        future.
+                        Here, we can present more detailed predictions, such as
+                        the projected population trend, likely habitats, and
+                        more information about the bird's future.
                       </p>
 
                       {/* Line Chart for Predictions */}
@@ -227,8 +231,7 @@ function DialogBox({predictionData, closeModal, isPredicting, activeTab, setActi
                         </h4>
                         <Line
                           data={{
-                            labels: predictionData.graphData
-                              .trendLabels || [
+                            labels: predictionData.graphData.trendLabels || [
                               "2024",
                               "2025",
                               "2026",
@@ -254,7 +257,6 @@ function DialogBox({predictionData, closeModal, isPredicting, activeTab, setActi
                               },
                             ],
                           }}
-                          
                         />
                       </div>
                     </div>
@@ -265,13 +267,13 @@ function DialogBox({predictionData, closeModal, isPredicting, activeTab, setActi
                 {predictionData.safe === false && (
                   <div className="mt-8 bg-gradient-to-r from-red-300 to-red-500 p-6 rounded-xl">
                     <h3 className="font-semibold text-2xl text-center text-white mb-4">
-                      How to Prevent {predictionData.species} from
-                      Becoming Endangered
+                      How to Prevent {predictionData.species} from Becoming
+                      Endangered
                     </h3>
                     <p className="text-lg text-center text-white mb-4">
                       Taking action to protect the{" "}
-                      <strong>{predictionData.species}</strong> is
-                      crucial. Here are some ways you can help:
+                      <strong>{predictionData.species}</strong> is crucial. Here
+                      are some ways you can help:
                     </p>
                     <ul className="list-disc list-inside text-sm text-white">
                       <li>Protect and restore natural habitats.</li>
@@ -287,7 +289,7 @@ function DialogBox({predictionData, closeModal, isPredicting, activeTab, setActi
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default DialogBox
+export default DialogBox;

@@ -6,7 +6,8 @@ import Shivam from "../../assests/shivam.png"
 import Bharat from "../../assests/bharatsec.jpg"
 import Utkarsh from "../../assests/utkarsh.png"
 import seema_maam from "../../assests/seema_maam.jpg"
-import avatar from "../../assests/avatar.png";
+import pranva from "../../assests/pranav.jpg"
+// import avatar from "../../assests/avatar.png";
 import { useNavigate } from "react-router-dom";
 
 const teamMembers = [
@@ -57,13 +58,13 @@ const teamMembers = [
   {
     name: "Pranav",
     role: "Contributor",
-    img: avatar,
+    img: pranva,
     social: {
       twitter: "https://twitter.com/",
       linkedin: "https://linkedin.com/in/",
     },
     description:
-      "Pranav is our contributor",
+      "Pranav is our backend contributor",
   },
 ];
 
