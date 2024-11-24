@@ -82,17 +82,17 @@ const BirdUploadSection = () => {
           species: predictedSpecies,
           safe: false,  // false means endangered
           description:
-            "The *Golden Eagle* 🦅 is one of the most majestic birds of prey found in the Northern Hemisphere. Known for their powerful wingspan, keen eyesight, and strong hunting skills, they rule the skies with grace and precision. Golden Eagles are highly adaptable, but they face significant threats from habitat loss and hunting.",
+            `The ${predictedSpecies} 🦅 is one of the most majestic birds of prey found in the Northern Hemisphere. Known for their powerful wingspan, keen eyesight, and strong hunting skills, they rule the skies with grace and precision. ${predictedSpecies} are highly adaptable, but they face significant threats from habitat loss and hunting.`,
           analysisText: [
-            "Golden Eagles are primarily found in mountainous areas where they build large nests.",
-            "They are skilled hunters, often preying on mammals such as rabbits and squirrels.",
-            "With a wingspan of up to 7 feet, they are capable of reaching speeds of up to 150 mph during dives.",
-            "Golden Eagles play an important role in the ecosystem as apex predators controlling populations of smaller mammals.",
+            `${predictedSpecies} are primarily found in mountainous areas where they build large nests.`,
+            `They are skilled hunters, often preying on mammals such as rabbits and squirrels.`,
+            `With a wingspan of up to 7 feet, they are capable of reaching speeds of up to 150 mph during dives.`,
+            `${predictedSpecies} play an important role in the ecosystem as apex predators controlling populations of smaller mammals.`,
           ],
           predictionsText: [
-            "Golden Eagles are often sighted near cliffs and rugged terrains, ideal for nesting and hunting.",
-            "They have a strong migratory behavior, often moving southward during winter months.",
-            "As climate change affects ecosystems, their habitats may shift, which could impact their migratory patterns.",
+            `${predictedSpecies} are often sighted near cliffs and rugged terrains, ideal for nesting and hunting.`,
+            `They have a strong migratory behavior, often moving southward during winter months.`,
+            `As climate change affects ecosystems, their habitats may shift, which could impact their migratory patterns.`,
           ],
           graphData: {
             labels: [
