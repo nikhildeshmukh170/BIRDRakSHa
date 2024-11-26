@@ -165,5 +165,5 @@ CORS_ALLOW_METHODS = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Add your frontend URL here
-    "https://yourfrontenddomain.com",  # If you have a production frontend domain
+    "https://birdraksha.vercel.app/",  # If you have a production frontend domain
 ]
