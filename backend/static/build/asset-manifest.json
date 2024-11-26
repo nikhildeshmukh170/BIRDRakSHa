@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9e70ad0e.css",
+    "main.js": "/static/js/main.64f58383.js",
+    "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
+    "static/media/birdVideo.mp4": "/static/media/birdVideo.c6b345f3a697565fe9ce.mp4",
+    "static/media/uploadbgroundVideo.mp4": "/static/media/uploadbgroundVideo.e7d85f5d24e313ac2055.mp4",
+    "static/media/backgroundVideo.mp4": "/static/media/backgroundVideo.a2279b19db33701355d4.mp4",
+    "static/media/pranav.jpg": "/static/media/pranav.662d977829c0e9b1a521.jpg",
+    "static/media/logo.png": "/static/media/logo.f9ed3e0e5041d312861f.png",
+    "static/media/nikhil.png": "/static/media/nikhil.dbdcb410de81e2698b67.png",
+    "static/media/shivam.png": "/static/media/shivam.cbcfafd5e420038a7815.png",
+    "static/media/seema_maam.jpg": "/static/media/seema_maam.7d09a5edea882c0829bb.jpg",
+    "static/media/utkarsh.png": "/static/media/utkarsh.6f1a6c7a2e8e437f015d.png",
+    "static/media/bharatsec.jpg": "/static/media/bharatsec.5fb1ba912078e17227d6.jpg",
+    "index.html": "/index.html",
+    "main.9e70ad0e.css.map": "/static/css/main.9e70ad0e.css.map",
+    "main.64f58383.js.map": "/static/js/main.64f58383.js.map",
+    "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e70ad0e.css",
+    "static/js/main.64f58383.js"
+  ]
+}

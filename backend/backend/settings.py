@@ -130,7 +130,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Optional: Additional directories to search for static files
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Add your app's static files here
+    os.path.join(BASE_DIR, 'static', 'build'),  # Add your app's static files here
 ]
 
 # Media files
