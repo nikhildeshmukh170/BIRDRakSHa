@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "localhost",  # Local development
     "127.0.0.1",  # Localhost IP
-    "your-production-domain.com",  # Add your production domain here
+    "birdraksha.onrender.com",  # Add your production domain here
 ]
 
 
