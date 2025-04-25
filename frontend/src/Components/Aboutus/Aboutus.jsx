@@ -7,6 +7,7 @@ import Bharat from "../../assests/bharatsec.jpg"
 import Utkarsh from "../../assests/utkarsh.png"
 import seema_maam from "../../assests/seema_maam.jpg"
 import pranva from "../../assests/pranav.jpg"
+import Arpit from "../../assests/arpit.jpg"
 // import avatar from "../../assests/avatar.png";
 import { useNavigate } from "react-router-dom";
 
@@ -68,14 +69,14 @@ const teamMembers = [
   },
   {
     name: "Arpit Panwar",
-    role: "Frontend Developer, Machine Learning Specialist",
-    img: Nikhil,
+    role: "Frontend Developer & AI Contributor",
+    img: Arpit,
     social: {
       twitter: "https://twitter.com/arpit",
       linkedin: "https://www.linkedin.com/in/arpit-panwar-600804254/",
     },
     description:
-      "Arpit is responsible for frontend development and UI/UX design, ensuring a smooth user experience while also specializing in machine learning.",
+      "Arpit is our Frontend and AI contributor.",
   },
 
 ];
