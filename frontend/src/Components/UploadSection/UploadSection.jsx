@@ -64,7 +64,7 @@ const BirdUploadSection = () => {
         const formData = new FormData();
         formData.append("image", imageFile);
 
-        const response = await fetch("https://birdraksha.onrender.com/api/predict/", {
+        const response = await fetch("https://localhost:8000/api/predict/", {
           method: "POST",
           body: formData,
         });
