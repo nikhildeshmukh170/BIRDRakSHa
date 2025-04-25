@@ -66,6 +66,18 @@ const teamMembers = [
     description:
       "Pranav is our backend contributor",
   },
+  {
+    name: "Arpit Panwar",
+    role: "Frontend Developer, Machine Learning Specialist",
+    img: Nikhil,
+    social: {
+      twitter: "https://twitter.com/arpit",
+      linkedin: "https://www.linkedin.com/in/arpit-panwar-600804254/",
+    },
+    description:
+      "Arpit is responsible for frontend development and UI/UX design, ensuring a smooth user experience while also specializing in machine learning.",
+  },
+
 ];
 
 
