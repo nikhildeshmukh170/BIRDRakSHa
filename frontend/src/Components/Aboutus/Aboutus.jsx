@@ -7,7 +7,7 @@ import Bharat from "../../assests/bharatsec.jpg"
 import Utkarsh from "../../assests/utkarsh.png"
 import seema_maam from "../../assests/seema_maam.jpg"
 import pranva from "../../assests/pranav.jpg"
-import Arpit from "../../assests/arpit.jpg"
+import Arpit from "../../assests/Arpit.jpg"
 // import avatar from "../../assests/avatar.png";
 import { useNavigate } from "react-router-dom";
 
