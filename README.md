@@ -67,3 +67,7 @@ To get a local copy up and running, follow these simple steps:
    cd birdraksha/backend
 
 
+#Contributors 
+Nikhil Deshmukh
+Somala Bharath Sai
+Shivam Kumar Pathak
