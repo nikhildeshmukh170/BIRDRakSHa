@@ -7,7 +7,6 @@ import Bharat from "../../assests/bharatsec.jpg"
 import Utkarsh from "../../assests/utkarsh.png"
 import seema_maam from "../../assests/seema_maam.jpg"
 import pranva from "../../assests/pranav.jpg"
-import Arpit from "../../assests/Arpit.jpg"
 // import avatar from "../../assests/avatar.png";
 import { useNavigate } from "react-router-dom";
 
@@ -66,17 +65,6 @@ const teamMembers = [
     },
     description:
       "Pranav is our backend contributor",
-  },
-  {
-    name: "Arpit Panwar",
-    role: "Frontend Developer & AI Contributor",
-    img: Arpit,
-    social: {
-      twitter: "https://twitter.com/arpit",
-      linkedin: "https://www.linkedin.com/in/arpit-panwar-600804254/",
-    },
-    description:
-      "Arpit is our Frontend and AI contributor.",
   },
 
 ];
