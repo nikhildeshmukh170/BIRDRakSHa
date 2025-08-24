@@ -16,7 +16,6 @@ const teamMembers = [
     role: "Frontend Developer, UI/UX Designer & Machine Learning Specialist",
     img: Nikhil,
     social: {
-      twitter: "https://twitter.com/nikhil",
       linkedin: "https://linkedin.com/in/nikhil-d-deshmukh",
     },
     description:
@@ -27,7 +26,6 @@ const teamMembers = [
     role: "Backend Developer, API Integration & Machine Learning Specialist",
     img: Shivam,
     social: {
-      twitter: "https://twitter.com/shivam",
       linkedin: "https://linkedin.com/in/shivamkumarpathak0610",
     },
     description:
@@ -38,7 +36,6 @@ const teamMembers = [
     role: "Research Specialist",
     img: Bharat,
     social: {
-      twitter: "https://twitter.com/somala",
       linkedin: "https://linkedin.com/in/bharath-somala-computer-science",
     },
     description:
@@ -49,7 +46,6 @@ const teamMembers = [
     role: "Data Analyst & Visualization Expert",
     img: Utkarsh,
     social: {
-      twitter: "https://twitter.com/utkarsh",
       linkedin: "https://linkedin.com/in/utkarsh-maurya-515258252",
     },
     description:
@@ -60,7 +56,6 @@ const teamMembers = [
     role: "Contributor",
     img: pranva,
     social: {
-      twitter: "https://twitter.com/",
       linkedin: "https://linkedin.com/in/",
     },
     description:
